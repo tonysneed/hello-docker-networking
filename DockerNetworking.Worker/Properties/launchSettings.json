@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "DockerNetworking.Worker": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

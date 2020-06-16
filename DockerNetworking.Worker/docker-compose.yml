@@ -1,0 +1,18 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+version: '3.8'
+
+services:
+  docker-networking-worker:
+    image: docker-networking-worker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment: 
+      - DOTNET_ENVIRONMENT=Production
+    networks:
+      - my-network
+
+networks: 
+  my-network:
+    external: true
+
